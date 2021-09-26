@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/taskAlert">
+    android:id="@+id/taskAlert"
+    android:background="@drawable/gradiant_background">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMain"
@@ -16,7 +17,8 @@
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,6 +33,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
+            android:maxLines="1"
             android:hint="Enter Task"
             android:inputType="textCapWords"
             android:outlineAmbientShadowColor="@color/green"

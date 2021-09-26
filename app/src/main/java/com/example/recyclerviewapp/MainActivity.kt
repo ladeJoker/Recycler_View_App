@@ -31,17 +31,17 @@ class MainActivity : AppCompatActivity() {
 
     fun addTask() {
         var check = true
-        var input = userEntry.text
+        var input = userEntry.text.toString()
         try {
-            Integer.parseInt(input.toString())
+            Integer.parseInt(input)
         }catch (e:Exception){
             check = false
         }
 
-        if(check == true){
+        if(check == true || input == null || input == ""){
             Snackbar.make(appAlert , "Enter a Task!!", Snackbar.LENGTH_LONG).show()
         }else {
-            tasks.add(input.toString())
+            tasks.add(input)
             myRV.adapter = RecyclerViewAdapter(tasks)
             myRV.layoutManager = LinearLayoutManager(this)
             userEntry.setText("")
